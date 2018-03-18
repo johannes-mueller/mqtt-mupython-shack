@@ -56,13 +56,13 @@ We put two LEDs (red and green) to the GPIO pins of the esp32. By subscribing
 to the mqtt topic `/light/*` we can receive message to switch the corresponding
 LED on and off.
 
-Copy `main-subscribe.py` to the esp32 as `/main.py` and press the reset button.
+Copy the adjusted `main-subscribe.py` to the esp32 as `/main.py` and press the reset button.
 
 Now if on the mqtt bus the message topic `/light/green` and payload `on` is
 published the green LED should light up. If you have installed the
 `mosquitto-clients` you can do that by
 ```
-mosquitto_pub -h localhost -t "/light/green" -m "on"
+mosquitto_pub -h localhost -t "light/green" -m "on"
 ```
 
 By giving the message the payload `off` the LED switches off again. Same for
@@ -71,8 +71,24 @@ the red LED for the topic `/light/red`
 
 ### Publishing messages
 
-Now we connect a switch to an GPIO pin and when the switch changes position we
+Now we connect a button to an GPIO pin and when the button changes state we
 publish a message which another mqtt client can subscribe to.
+
+Copy the adjusted `main-publish.py` to the esp32 as `/main.py`
+
+By subscribing to the topic `/button` a mqtt client can receive messages when the
+button is pressed or released.
+```
+mosquitto_sub -h localhost -t "button"
+```
+
+### Hack it
+
+Now you can play around with this. For example you can adjust the message that
+`main-publish.py` publishes or `main-subscribe.py` subscribes to in order to
+use the button at one esp32 to switch the LEDs at another.
+
+Have fun.
 
 
 ### Publishing and receiving messages on the same esp32
