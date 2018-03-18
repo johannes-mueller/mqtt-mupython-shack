@@ -2,7 +2,11 @@
 A simple mqtt demo using micropython for shackspace.
 
 This demo aims at demonstrating how two esp32 chips can communicate with each
-other via an mqtt broker.
+other via an mqtt broker. This is not meant to be used for anything except to
+learn how mqtt works. We are using it in our local hackspace to play around
+with mqtt on esp32. When I say learning I mean that I am myself learning. So
+there might be lots of errors or stupidities in there. Feel free to pull
+request :)
 
 
 ## Prerequisites
@@ -46,6 +50,11 @@ logfile. Maybe you need to adjust the loglevel in the configuration.
 
 Usually you need to press the reset button on the dev boards in order to launch
 the demo properly.
+
+## Credits
+
+The file `mqtt.py` is a modified version from the `umqtt` client that can be
+found on Github.
 
 
 ## Demos
