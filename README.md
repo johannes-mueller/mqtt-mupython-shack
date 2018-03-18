@@ -34,13 +34,13 @@ your network.
 
 ## Installation
 
-First copy `mqtt.py` on both esp32. Then for every demo you need to adjust the
-concerning `main-*.py` file in the following way:
+First copy `mqtt.py` on both esp32. Then adjust `boot.py`
 
+* add the credidentials `essid` and `password` so that they match your wlan.
 
-* adjust the credidentials `essid` and `password` so that they match your wlan.
+* the `broker_ip` to match to the ip address of your broker.
 
-* adjust the `broker_ip` to match to the ip address of your broker.
+and put `boot.py` to the esp32.
 
 
 Then copy the `main-*.py` file to the esp32(s) as `/main.py`. If you want to
