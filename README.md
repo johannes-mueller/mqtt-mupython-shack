@@ -103,3 +103,12 @@ Have fun.
 ### Publishing and receiving messages on the same esp32
 
 This is a bit trickier.
+
+
+## TODO
+
+* Better idling?
+
+* Authentication
+
+* Encryption
