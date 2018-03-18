@@ -53,8 +53,8 @@ the demo properly.
 
 ## Credits
 
-The file `mqtt.py` is a modified version from the `umqtt` client that can be
-found on Github.
+The file `mqtt.py` is a modified version from the `umqtt` simple client of
+`micropython-lib` that can be found on Github.
 
 
 ## Demos
