@@ -32,7 +32,7 @@ while not wlan.isconnected():
      machine.idle()
 
 print("Connected to Wifi\n")
-client = MQTTClient("demo", broker_host, port=1883)
+client = MQTTClient("subscriber", broker_host, port=1883)
 client.set_callback(mqtt_callback)
 client.settimeout = settimeout
 client.connect()
