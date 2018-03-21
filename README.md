@@ -71,7 +71,7 @@ Now if on the mqtt bus the message topic `/light/green` and payload `on` is
 published the green LED should light up. If you have installed the
 `mosquitto-clients` you can do that by
 ```
-mosquitto_pub -h localhost -t "light/green" -m "on"
+mosquitto_pub -h localhost -t "light/green" -m "ON"
 ```
 
 By giving the message the payload `off` the LED switches off again. Same for
